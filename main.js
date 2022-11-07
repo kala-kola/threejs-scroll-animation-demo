@@ -33,10 +33,16 @@ camera.position.setX(-3)
 renderer.render(scene, camera)
 // HERE WE CALL THE RENDER METHOD PASSING SCENE AND CAMERA AS ARGUEMENTS.
 
-// TORUS
+//  NOW TO ADD AN OBJECT TO THE SCENE; ---------------------------------------------------------
+// GEOMETRY OBJECT HAS 3 STEPS
 
+//1 GEOMETRY / VECTORS THAT DEFINE THE OBJECT ITSELF.......TORUS IS A BUILT IN SHAPE.....
 const geometry = new THREE.TorusGeometry(10, 3, 16, 100)
+
+//2 MATERIAL THE WRAPPING PAPER FOR AN OBJECT........
 const material = new THREE.MeshStandardMaterial({ color: 0x2c0147 })
+
+// 3 MESH COMBING THE GEOMETRY TO THE MATERIAL.........
 const torus = new THREE.Mesh(geometry, material)
 
 scene.add(torus)
@@ -54,11 +60,11 @@ scene.add(pointLight, ambientLight)
 
 // Helpers
 
-// const lightHelper = new THREE.PointLightHelper(pointLight)
-// const gridHelper = new THREE.GridHelper(200, 50);
-// scene.add(lightHelper, gridHelper)
+const lightHelper = new THREE.PointLightHelper(pointLight)
+const gridHelper = new THREE.GridHelper(200, 50)
+scene.add(lightHelper, gridHelper)
 
-// const controls = new OrbitControls(camera, renderer.domElement);
+const controls = new OrbitControls(camera, renderer.domElement)
 
 function addStar() {
   const geometry = new THREE.SphereGeometry(0.25, 24, 24)
@@ -142,7 +148,7 @@ function animate() {
 
   moon.rotation.x += 0.005
 
-  // controls.update();
+  controls.update()
 
   renderer.render(scene, camera)
 }
