@@ -4,74 +4,53 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jeff's Website</title>
+    <title>Dracula Theme 3.js</title>
   </head>
   <body>
 
     <canvas id="bg"></canvas>   
-
+  <!---CANVAS---the element that shows the actual THREE.js scene---->
     <main>
-
       <header>
-        <h1>Jeff Delaney</h1>
-        <p>🚀 Welcome to my website!</p>
+        <h1>Welcome to THREE js</h1>
       </header>
 
-
       <blockquote>
-        <p>I like making stuff and putting it on the internet</p>
+        <p>THREE.js is a Library for drawing 3d Graphics in the browser with Web GL and JavaScript</p>
       </blockquote>
 
-      <section>
-        <h2>📜 Manifesto</h2>
+        <section>
+        <h2>What are the components of THREE js?</h2>
+        <h2>Scene & lights</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            A scene must have one or more lights to make shapes visible. The scene is like a container that holds your objects cameras and lights.
         </p>
-
+        <h2>Camera</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            To give the end user perspective on the screen. There are multiple camera types in three.js such as Array camera, cube camera and stereo camera. We will be using perspective camera. This mimics the human eyeball 👀 
         </p>
-
+        <h2>Action</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+           In THREE.js land this is known as rendering and is how all the magic happens 🧙🏼‍♂️ When animation comes into play we can set up an infinate loop or set a different trigger like a scroll bar to change the properties on these objects to animate them. 
         </p>
-
-      </section>
+       </section>
+       
+       
+       
+       <blockquote>
+        <p>This website is brought to you by Dracula VS code theme</p>
+        </blockquote>
+      
+     
 
       <section class="light">
-        <h2>👩🏽‍🚀 Projects</h2>
-
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-
-        <h2>🏆 Accomplishments</h2>
-
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-
-      </section>
-
-      <blockquote>
-        <p>The best way out is always through <br>-Robert Frost</p>
-      </blockquote>
-
-      <section class="left">
-        <h2>🌮 Work History</h2>
-
-        <h3>McDonalds</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-        <h3>Burger King</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-        <h3>Taco Bell</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+        <h2>Other cool stuff </h2>
+        <h2>HELPERS</h2>
+        <p>Light helper: Showing the position of a point light, add a wireframe to the scene the shows the position and direction of the light source.</p>
+         <p> Grid Helper: shows a 2D grid. you can use orbit controls to uses the mouse to update the camera position </p>
+          <p>Math Helpers: Randomly generating star objects throughout the scene along the  x, y and z axis</p>
+  
+     
 
       </section>
 
@@ -79,26 +58,8 @@
         <p>Thanks for watching!</p>
       </blockquote>
 
-
     </main>
     
     <script type="module" src="/main.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   </body>
 </html>
